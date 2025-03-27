@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>Register</h2>
+
+<form method="post" asp-action="Register" asp-controller="Auth">
+    <div>
+        <label>Full Name:</label>
+        <input type="text" name="FullName" required class="form-control" />
+    </div>
+
+    <div>
+        <label>Email:</label>
+        <input type="email" name="Email" required class="form-control" />
+    </div>
+
+    <div>
+        <label>Password:</label>
+        <input type="password" name="Password" required class="form-control" />
+    </div>
+
+    <div>
+        <label>Role:</label>
+        <select name="Role" class="form-control">
+            <option value="Student">Student</option>
+            <option value="Faculty">Faculty</option>
+            <option value="Admin">Admin</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Register</button>
+</form>
+
